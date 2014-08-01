@@ -1,40 +1,68 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.harmonicnw.techstart.fhsapp" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>FHSApp</name>
+<widget id="com.fhsapp.client" version="1.0.0" versionCode="10" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>FhsApp</name>
     <description>
-        FHS App
+        The FHS APP is the first announcement app for Franklin High School in Portland Oregon. This app is designed to help students receive personalized announcements for their classes, clubs, and sports.
     </description>
-    <author email="harmonicnw@gmail.com" href="http://www.harmonicnw.com">
-        Dustin Diep, Julian Weisbord, Griffin Drake, Joshua Hauser
-    </author>
-    <access origin="*" />
+    <author href="http://fhsapp.com" email="harmonicnw@gmail.com">Dustin, Griffin, Julian, Josh</author>
+    
+    <feature name="http://api.phonegap.com/1.0/device" />
+    
+    <!-- preferences -->
+    
+	<preference name="phonegap-version" value="3.4.0" />
+	<preference name="BackupWebStorage" value="none" />
+    
+    <preference name="permissions" value="none" />
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-installLocation" value="auto" />
     
-    <!-- PLUGINS -->
-    <feature name="http://api.phonegap.com/1.0/file"/>
+    <!-- icons -->
     
-    <!-- SPLASH SCREENS -->
-    <gap:splash src="splash.png" />
+    <icon src="www/icon.png" />
+    
+    <icon src="www/res/icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="www/res/icon/ios/icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+    <icon src="www/res/icon/ios/icon-76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="www/res/icon/ios/icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+    <icon src="www/res/icon/ios/icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+	<icon src="www/res/icon/ios/icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="www/res/icon/ios/icon@2x.png" gap:platform="ios" width="114" height="114" />
+    
+    <!-- splash screens -->
+    
+    <gap:splash src="www/res/screen/android/drawable-port-ldpi/screen.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="www/res/screen/android/drawable-port-mdpi/screen.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="www/res/screen/android/drawable-port-hdpi/screen.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="www/res/screen/android/drawable-port-xhdpi/screen.png" gap:platform="android" gap:density="xhdpi" />
+    
+    <gap:splash src="www/res/screen/ios/Default~iphone.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="www/res/screen/ios/Default@2x~iphone.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="www/res/screen/ios/Default-568h@2x~iphone.png" gap:platform="ios" width="640" height="1136" />
+    <gap:splash src="www/res/screen/ios/Default-Portrait~ipad.png" gap:platform="ios" width="768" height="1024" />
+    <gap:splash src="www/res/screen/ios/Default-Landscape~ipad.png" gap:platform="ios" width="1024" height="768" />
+    
+    <!-- plugins -->
+    
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+	<gap:plugin name="com.phonegap.plugin.statusbar" /> 
+	
+	<!-- platforms -->
 
-    <!-- iOS -->
-    <gap:splash src="Images/app_splash/ios/Default~iphone.png" gap:platform="ios" width="320" height="480" />
-	<gap:splash src="Images/app_splash/ios/Default@2x~iphone.png" gap:platform="ios" width="640" height="960" />
-	<gap:splash src="Images/app_splash/ios/Default-568h@2x~iphone.png" gap:platform="ios" width="640" height="1136" />
-	<gap:splash src="Images/app_splash/ios/Default-Landscape~ipad.png" gap:platform="ios" width="1024" height="748" />
-	<gap:splash src="Images/app_splash/ios/Default-Portrait~ipad.png" gap:platform="ios" width="768" height="1004" />
-	<!-- retina iPad support: PhoneGap 2.5.0+ only -->
-	<gap:splash src="Images/app_splash/ios/Default-Landscape@2x~ipad.png" gap:platform="ios" width="2048" height="1496" />
-	<gap:splash src="Images/app_splash/ios/Default-Portrait@2x~ipad.png" gap:platform="ios" width="1536" height="2008" />
-	
-	<!-- ICONS -->
-	<icon src="icon.png" />
-	
-	<!-- iOS -->
-	<icon src="Images/app_icon/ios/icon.png" gap:platform="ios" width="57" height="57" />
-	<icon src="Images/app_icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
-	<icon src="Images/app_icon/ios/icon@2x.png" gap:platform="ios" width="114" height="114" />
-	<!-- retina iPad support: PhoneGap 2.5.0+ only -->
-	<icon src="Images/app_icon/ios/icon-72@2x.png" gap:platform="ios" width="144" height="144" />
-	
+	<gap:platform name="ios" />
+	<gap:platform name="android" />
+       
+    <access origin="*" />
 </widget>
