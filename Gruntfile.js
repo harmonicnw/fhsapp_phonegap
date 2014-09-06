@@ -38,24 +38,33 @@ module.exports = function (grunt) {
 					return pkg.name;
 				},
 				
-				key: {
-					store: 'FhsApp.keystore',
-					alias: 'FhsApp',
-					aliasPassword: function(){
-						return('rainorshine4')
-					},
-					storePassword: function(){
-						return('rainorshine4')
-					}
+				versionCode: function() {
+				  var vArr = pkg.version.split["."];
+				  versionCode = vArr[0];
+  
+				  for (var i = 1; i < vArr.length; i++) {
+				    versionCode += ("00" + vArr[i]).slice(-3);
+				  }
+				  
+				  return versionCode;
 				},
-				
-				versionCode: 1,
 				
 				releases: 'releases',
 				releaseName: function(){
 					var pkg = grunt.file.readJSON('package.json');
 					return(pkg.name + '-' + pkg.version);
 				},
+				
+				key: {
+					store: 'FhsApp.keystore',
+					alias: 'FhsApp',
+					aliasPassword: function(){
+						return('FhsApp')
+					},
+					storePassword: function(){
+						return('FhsApp')
+					}
+				}
 			}
 		},
 
