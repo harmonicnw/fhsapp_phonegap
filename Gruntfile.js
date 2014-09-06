@@ -276,7 +276,7 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,png,txt}',
                         '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
+                        'Images/{,*/}*.{webp,gif}',
 						'res/**',
                         'styles/fonts/{,*/}*.*'
                     ]
@@ -325,19 +325,19 @@ module.exports = function (grunt) {
         'concurrent:test',
         'autoprefixer',
         'connect:test',
-        'mocha'
+        //'mocha'
     ]);
 
     grunt.registerTask('build', [
         'clean:dist',
-        //'useminPrepare',
+        'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
         'concat',
         'cssmin',
         'uglify',
         'copy:dist',
-        'rev',
+        //'rev',
         'usemin'
     ]);
 
@@ -349,7 +349,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         //'jshint',
-        'test',
+        //'test',
         'build'
     ]);
 };
