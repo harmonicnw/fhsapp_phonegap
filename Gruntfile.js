@@ -39,14 +39,13 @@ module.exports = function (grunt) {
 				},
 				
 				versionCode: function() {
-				  var vArr = pkg.version.split["."];
-				  versionCode = vArr[0];
-  
-				  for (var i = 1; i < vArr.length; i++) {
-				    versionCode += ("00" + vArr[i]).slice(-3);
-				  }
-				  
-				  return versionCode;
+					var pkg = grunt.file.readJSON('package.json');
+					var vArr = pkg.version.split('.');
+					var vc = vArr[0];
+					for (var i = 1; i < vArr.length; i++) {
+						vc += ("00" + vArr[i]).slice(-3);
+					}
+					return vc;
 				},
 				
 				releases: 'releases',
