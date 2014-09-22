@@ -24,7 +24,8 @@ module.exports = function (grunt) {
 			config: {
 				root: 'dist',
 				config: 'config.xml',
-				cordova: '.cordova',
+				cordova: 'phonegap/.cordova',
+				html : 'index.html',
 				path: 'phonegap',
 				plugins: [
 					'https://github.com/phonegap-build/StatusBarPlugin.git',
