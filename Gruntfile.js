@@ -29,7 +29,8 @@ module.exports = function (grunt) {
 				path: 'phonegap',
 				plugins: [
 					'https://github.com/phonegap-build/StatusBarPlugin.git',
-					'https://github.com/apache/cordova-plugin-inappbrowser.git'
+					'https://github.com/apache/cordova-plugin-inappbrowser.git',
+					'https://github.com/apache/cordova-plugin-splashscreen.git'
 				],
 				platforms: ['ios', 'android'],
 				verbose: false,
@@ -64,6 +65,58 @@ module.exports = function (grunt) {
 					storePassword: function(){
 						return('FhsApp')
 					}
+				},
+				
+				icons: {
+		          	android: {
+						ldpi: '<%= yeoman.dist %>/res/icon/android/drawable-ldpi/icon.png',
+						mdpi: '<%= yeoman.dist %>/res/icon/android/drawable-mdpi/icon.png',
+						hdpi: '<%= yeoman.dist %>/res/icon/android/drawable-hdpi/icon.png',
+						xhdpi: '<%= yeoman.dist %>/res/icon/android/drawable-xhdpi/icon.png',
+						//xxhdpi: '<%= yeoman.dist %>/res/icon/android/drawable-xxhdpi/icon.png'
+					},
+					//wp8: {
+					//  app: 'icon-62-tile.png',
+					//  tile: 'icon-173-tile.png'
+					//},
+					ios: {
+						//icon29: '<%= yeoman.dist %>/res/icon/ios/icon-small.png',
+						//icon29x2: '<%= yeoman.dist %>/res/icon/ios/icon-small@2x.png',
+						//icon40: '<%= yeoman.dist %>/res/icon/ios/icon-40.png',
+						//icon40x2: '<%= yeoman.dist %>/res/icon/ios/icon-40@2x.png',
+						//icon50: '<%= yeoman.dist %>/res/icon/ios/icon-50.png',
+						//icon50x2: '<%= yeoman.dist %>/res/icon/ios/icon-50@2x.png',
+						icon57: '<%= yeoman.dist %>/res/icon/ios/icon-57.png',
+						icon57x2: '<%= yeoman.dist %>/res/icon/ios/icon-57@2x.png',
+						//icon60: '<%= yeoman.dist %>/res/icon/ios/icon-60.png',
+						icon60x2: '<%= yeoman.dist %>/res/icon/ios/icon-60@2x.png',
+						icon72: '<%= yeoman.dist %>/res/icon/ios/icon-72.png',
+						icon72x2: '<%= yeoman.dist %>/res/icon/ios/icon-72@2x.png',
+						icon76: '<%= yeoman.dist %>/res/icon/ios/icon-76.png',
+						icon76x2: '<%= yeoman.dist %>/res/icon/ios/icon-76@2x.png'
+			        }
+				},
+				
+				screens: {
+			        android: {
+						ldpi: '<%= yeoman.dist %>/res/screen/android/drawable-ldpi/splash.png',
+						//ldpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-ldpi/splash.png',
+						mdpi: '<%= yeoman.dist %>/res/screen/android/drawable-mdpi/splash.png',
+						//mdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-mdpi/splash.png',
+						hdpi: '<%= yeoman.dist %>/res/screen/android/drawable-hdpi/splash.png',
+						//hdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-hdpi/splash.png',
+						xhdpi: '<%= yeoman.dist %>/res/screen/android/drawable-xhdpi/splash.png',
+						//xhdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-xhdpi/splash.png'
+			        },
+			        ios: {
+						ipadLand: '<%= yeoman.dist %>/res/screen/ios/Default-Landscape~ipad.png',
+						//ipadLandx2: '<%= yeoman.dist %>/res/screen/ios/Default-Landscape@2x~ipad.png',
+						ipadPortrait: '<%= yeoman.dist %>/res/screen/ios/Default-Portrait~ipad.png',
+						//ipadPortraitx2: '<%= yeoman.dist %>/res/screen/ios/Default-Portrait@2x~ipad.png',
+						iphonePortrait: '<%= yeoman.dist %>/res/screen/ios/Default~iphone.png',
+						iphonePortraitx2: '<%= yeoman.dist %>/res/screen/ios/Default@2x~iphone.png',
+						iphone568hx2: '<%= yeoman.dist %>/res/screen/ios/Default-568h@2x~iphone.png'
+			        }
 				}
 			}
 		},
