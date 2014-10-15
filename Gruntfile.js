@@ -57,13 +57,13 @@ module.exports = function (grunt) {
 				},
 				
 				key: {
-					store: 'FhsApp.keystore',
+					store: 'fhsapp-dev.keystore',
 					alias: 'FhsApp',
 					aliasPassword: function(){
-						return('FhsApp')
+						return('rainorshine4')
 					},
 					storePassword: function(){
-						return('FhsApp')
+						return('rainorshine4')
 					}
 				},
 				
