@@ -100,19 +100,19 @@ module.exports = function (grunt) {
 				screens: {
 			        android: {
 						ldpi: '<%= yeoman.dist %>/res/screen/android/drawable-ldpi/splash.png',
-						//ldpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-ldpi/splash.png',
+						ldpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-ldpi/splash.png',
 						mdpi: '<%= yeoman.dist %>/res/screen/android/drawable-mdpi/splash.png',
-						//mdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-mdpi/splash.png',
+						mdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-mdpi/splash.png',
 						hdpi: '<%= yeoman.dist %>/res/screen/android/drawable-hdpi/splash.png',
-						//hdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-hdpi/splash.png',
+						hdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-hdpi/splash.png',
 						xhdpi: '<%= yeoman.dist %>/res/screen/android/drawable-xhdpi/splash.png',
-						//xhdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-xhdpi/splash.png'
+						xhdpiLand: '<%= yeoman.dist %>/res/screen/android/drawable-land-xhdpi/splash.png'
 			        },
 			        ios: {
 						ipadLand: '<%= yeoman.dist %>/res/screen/ios/Default-Landscape~ipad.png',
-						//ipadLandx2: '<%= yeoman.dist %>/res/screen/ios/Default-Landscape@2x~ipad.png',
+						ipadLandx2: '<%= yeoman.dist %>/res/screen/ios/Default-Landscape@2x~ipad.png',
 						ipadPortrait: '<%= yeoman.dist %>/res/screen/ios/Default-Portrait~ipad.png',
-						//ipadPortraitx2: '<%= yeoman.dist %>/res/screen/ios/Default-Portrait@2x~ipad.png',
+						ipadPortraitx2: '<%= yeoman.dist %>/res/screen/ios/Default-Portrait@2x~ipad.png',
 						iphonePortrait: '<%= yeoman.dist %>/res/screen/ios/Default~iphone.png',
 						iphonePortraitx2: '<%= yeoman.dist %>/res/screen/ios/Default@2x~iphone.png',
 						iphone568hx2: '<%= yeoman.dist %>/res/screen/ios/Default-568h@2x~iphone.png'
