@@ -1,6 +1,6 @@
 {
   "name": "FhsApp",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
